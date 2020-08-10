@@ -234,7 +234,7 @@ if (!function_exists('emoji_clear')) {
 
 if (PHP_SAPI !== 'cli') {
     // 注册跨域中间键
-    Middleware::add(function (Request $request, \Closure $next, $header = []) {
+   /* Middleware::add(function (Request $request, \Closure $next, $header = []) {
         if (($origin = $request->header('origin', '*')) !== '*') {
             $header['Access-Control-Allow-Origin'] = $origin;
             $header['Access-Control-Allow-Methods'] = 'GET,POST,PATCH,PUT,DELETE';
@@ -246,7 +246,7 @@ if (PHP_SAPI !== 'cli') {
         } else {
             return $next($request)->header($header);
         }
-    });
+    });*/
 }
 
 // 注册系统常用指令
